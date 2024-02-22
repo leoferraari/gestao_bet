@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  api-solid-pg:
+    image: bitnami/postgresql
+    ports:
+      - 5465:5432
+    environment:
+      - POSTGRESQL_USERNAME=gestao_bet
+      - POSTGRESQL_PASSWORD=gestao_bet
+      - POSTGRESQL_DATABASE=gestaobetproject
