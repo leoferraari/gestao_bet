@@ -70,11 +70,12 @@ model VerificationToken {
 }
 
 model BettingHouse {
-  id      String    @id @default(uuid())
-  userId  String
-  user    User      @relation(fields: [userId], references: [id])
-  name    String    @db.VarChar(60)
-  UserBet UserBet[]
+  id            String          @id @default(uuid())
+  userId        String
+  user          User            @relation(fields: [userId], references: [id])
+  name          String          @db.VarChar(60)
+  UserBet       UserBet[]
+  UserOperation UserOperation[]
 
   @@map("betting_houses")
 }
@@ -85,6 +86,9 @@ model UserOperation {
   user      User          @relation(fields: [userId], references: [id])
   operation TypeOperation
   date      DateTime      @db.Timestamp
+
+  bettingHouseId String
+  betting_house  BettingHouse @relation(fields: [bettingHouseId], references: [id])
 
   @@map("operations")
 }
