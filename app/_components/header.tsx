@@ -27,7 +27,7 @@ const Header = () => {
               </Button>
             </SheetTrigger>
 
-            <SheetContent className="p-0">
+            <SheetContent className="p-0 w-[250px] sm:w-[320px]">
               <SideMenu />
             </SheetContent>
           </Sheet>

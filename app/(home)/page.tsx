@@ -14,7 +14,6 @@ const Home = () => {
                 <p className="text-center font-semibold">Olá, bem-vindo a Gestão BET!</p>
             </div>
 
-  
             <div className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4 max-w-xs rounded-lg shadow-lg flex flex-col justify-center items-center">
                 <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center w-full" onClick={handleLoginClick}>
                     <FaGoogle/>
